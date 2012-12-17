@@ -52,29 +52,30 @@ if (window.Fader == null) {
     /*
     Private functions
     */
+    var this = {};
     
-    fadeCss = function(selector, time, ini, fin) {
+    this.fadeCss = function(selector, time, ini, fin) {
       var target = document.querySelectorAll(selector);
       for (var i in target){ //handle all the elements
-        executeFade(i, time, ini, fin);
+        thisexecuteFade(i, time, ini, fin);
       }
     };    
     
-    fadeWithId = function(id, time, ini, fin) {
+    this.fadeWithId = function(id, time, ini, fin) {
       var target = document.getElementById(id);
-      executeFade(target, time, ini, fin);
+      this.executeFade(target, time, ini, fin);
     };
     
-    fadeWithClass = function(className, index, time, ini, fin) {
+    this.fadeWithClass = function(className, index, time, ini, fin) {
       var target = document.getElementsByClassName(className)[index];
-      executeFade(target, time, ini, fin);
+      this.executeFade(target, time, ini, fin);
     };
     
-    fadeElement = function(elem, time, ini, fin) {
-      executeFade(elem, time, ini, fin);
+    this.fadeElement = function(elem, time, ini, fin) {
+      this.executeFade(elem, time, ini, fin);
     };
     
-    executeFade = function(target, time, ini, fin) {
+    this.executeFade = function(target, time, ini, fin) {
       var alpha = ini;
       var inc;
       if (fin >= ini) {
@@ -88,13 +89,13 @@ if (window.Fader == null) {
           if ((inc > 0 && alpha >= fin) || (inc < 0 && alpha <= fin)) {
             clearInterval(i);
           }
-          Fader.setAlpha(target, alpha);
+          this.setAlpha(target, alpha);
           alpha += inc;
         }, timer
       );
     };
     
-    setAlpha = function(target, alpha) {
+    this.setAlpha = function(target, alpha) {
       target.style.filter = "alpha(opacity="+ alpha +")";
       target.style.opacity = alpha/100
     };
