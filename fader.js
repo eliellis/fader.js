@@ -18,35 +18,35 @@ if (window.Fader == null) {
 (function(w, d){
 
     Fader.fadeOutWithId = function(id, time) {
-      fadeWithId(id, time, 100, 0);
+      this.fadeWithId(id, time, 100, 0);
     };
     
     Fader.fadeInWithId = function(id, time) {
-      fadeWithId(id, time, 0, 100);
+      this.fadeWithId(id, time, 0, 100);
     };
     
     Fader.fadeOutWithClass = function(className, index, time) {
-      fadeWithClass(className, index, time, 100, 0);
+      this.fadeWithClass(className, index, time, 100, 0);
     };
     
     Fader.fadeInWithClass = function(className, index, time) {
-      fadeWithClass(className, index, time, 0, 100);
+      this.fadeWithClass(className, index, time, 0, 100);
     };
     
     Fader.fadeOutElement = function(elem, time) {
-      fadeElement(elem, time, 100, 0);
+      this.fadeElement(elem, time, 100, 0);
     };
     
     Fader.fadeInElement = function(elem, time) {
-      fadeElement(elem, time, 0, 100);
+      this.fadeElement(elem, time, 0, 100);
     };
     
     Fader.fadeOutWithSelector = function(selector, time) {
-      fadeCss(selector, time, 100, 0);
+      this.fadeCss(selector, time, 100, 0);
     };
     
     Fader.fadeInWithSelector = function(selector, time) {
-      fadeCss(selector, time, 0, 100);
+      this.fadeCss(selector, time, 0, 100);
     };
     
     /*
