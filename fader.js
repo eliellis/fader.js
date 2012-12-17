@@ -4,8 +4,8 @@
 * Copyright 2012, Lukas Alexandre
 * Licensed under MIT
 */
-if (typeof wireman === "undefined" || wireman === null) {
-  wireman = {};
+if (typeof Fader === "undefined" || Fader === null) {
+  Fader = {};
 }
 
 (function(w, d){
