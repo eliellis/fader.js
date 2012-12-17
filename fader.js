@@ -4,8 +4,15 @@
 * Copyright 2012, Lukas Alexandre
 * Licensed under MIT
 */
+
+if (typeof window === "undefined" || window === null) {
+  window = { Fader: {} };
+}
 if (typeof Fader === "undefined" || Fader === null) {
   Fader = {};
+}
+if (window.Fader == null) {
+  window.Fader = {};
 }
 
 (function(w, d){
