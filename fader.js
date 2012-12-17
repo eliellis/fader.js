@@ -52,7 +52,7 @@ if (window.Fader == null) {
     /*
     Private functions
     */
-    var this = {};
+    this = {};
     
     this.fadeCss = function(selector, time, ini, fin) {
       var target = document.querySelectorAll(selector);
