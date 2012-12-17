@@ -96,6 +96,7 @@ if (window.Fader == null) {
     
     setAlpha = function(target, alpha) {
       target.style.filter = "alpha(opacity="+ alpha +")";
-      target.style.opacity = alpha/100;
+      target.style.opacity = alpha/100
+    };
   
 }(window, document));
