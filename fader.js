@@ -55,9 +55,7 @@ if (window.Fader == null) {
     
     function fadeCss(selector, time, ini, fin) {
       var target = document.querySelectorAll(selector);
-      for (var i in target){ //handle all the elements
-        executeFade(i, time, ini, fin);
-      }
+      executeFade(target[0], time, ini, fin);
     };    
     
     function fadeWithId(id, time, ini, fin) {
